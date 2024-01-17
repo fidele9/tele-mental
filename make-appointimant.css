@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgba(18, 20, 20, 0.363);
+    
+}
+header {
+    background-color: #3498db;
+    padding: 1rem;}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #0f0f0f9f;
+}
+
+.container {
+    width: 560px;
+    height: 1150px; /* Change height to auto to let it adjust based on content */
+    margin: 8% auto;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 20px; /* Add padding to the bottom */
+}
+.container h3{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #777;
+}
+.container form{
+    width:280px;
+    position: absolute;
+    top: 100px;
+    left: 40px;  
+
+}
+
+ input,
+ select,
+ textarea {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 15px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     background: transparent;}
+
+ ::placeholder{
+    color: #777;
+ }
+ form label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgb(14, 13, 13);
+}
+ .btn-box{
+width: 100%;
+margin: 30px auto;
+text-align: center;
+ }
+ form button{
+    width: 110px;
+    height: 30px;
+    margin: 0 10px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+border-radius: 30px;
+border: 0;
+outline: none;
+color: #fff;
+cursor: pointer;
+}
+#form2{
+    left: 560px;
+}
+#form3{
+    left: 560px;
+}
+.step-row{
+ width: 360px;
+ height: 40px;
+ margin:0 auto;  
+ display: flex; 
+ align-items: center;
+ box-shadow:0  -1px 5px -1px #000;
+position: relative;
+}
+.step-col{
+width: 120px;
+text-align: center;
+color: 333;
+position: relative;
+}
+#progress{
+    position: absolute;
+    height: 100%;
+    width: 120px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+transition: 1s;
+}
+#progress::after{
+content: '';
+height: 0;
+width: 0;
+border-top: 20px solid transparent;
+border-bottom: 20px solid transparent;
+position: absolute;
+right: -20px;
+top: 0;
+border-left: 20px solid #ffad06;
+}
+
