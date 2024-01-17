@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tele Mental</title>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tele Mental</div>
+            <ul>
+                <li><a href="#index.html">Home</a></li>
+                <li><a href="#About Us">About Us</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Contact us">Contact us</a></li>
+                <li><a href="#Call us on">Call us on</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="appointment">
+        <div class="container">
+            <h1>Request Consultation Appointment</h1>
+
+            <form action="submit_appointment.php" method="post">
+
+                <!-- User Information Form -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="communication">Preferred Communication Method:</label>
+                <select id="communication" name="communication">
+                    <option value="email">Email</option>
+                    <option value="phone">Phone Call</option>
+                    <option value="video">Video Call</option>
+                </select>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <!-- Appointment Details -->
+                <label for="consultationType">Type of Consultation:</label>
+                <select id="consultationType" name="consultationType">
+                    <option value="individual">Individual</option>
+                    <option value="group">Group</option>
+                    <option value="family">Family</option>
+                </select>
+
+                <label for="preferredDateTime">Preferred Date and Time:</label>
+                <input type="datetime-local" id="preferredDateTime" name="preferredDateTime" required>
+
+                <label for="duration">Duration (in minutes):</label>
+                <input type="number" id="duration" name="duration" required>
+
+                <label for="payment-mode">Preferred payment mode:</label>
+                <select id="payment-mode" name="payment-mode">
+                    <option value="momo">MOMO</option>
+                    <option value="bank">BANK</option>
+                </select>
+
+                <!-- Message Section -->
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+
+                <!-- Privacy and Consent -->
+                <label>
+                    <input type="checkbox" id="consent" name="consent" required>
+                    I agree to the privacy policy and terms of service.
+                </label>
+
+                <!-- Button for Submitting request -->
+                <button type="submit">Press next</button>
+            </form>
+
+
+            <!-- payment with bank account -->
+
+            <form action="#" method="post">
+
+                <h1>Payment form</h1>
+
+                <section>
+                    <label>Card number</label>
+                    <input>
+                </section>
+
+                <section>
+                    <label>Name on card</label>
+                    <input>
+                </section>
+
+                <section id="cc-exp-csc">
+                    <div>
+                        <label>Expiry date</label>
+                        <input>
+                    </div>
+                    <div>
+                        <label>Security code</label>
+                        <input>
+                        <div class="explanation">Last 3 digits on back of card</div>
+                    </div>
+                </section>
+
+                <button id="complete-payment">Complete payment</button>
+
+            </form>
+
+
+        </div>
+
+
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Contact us at: hafidele9@gmail.com | Phone: +250789831961</p>
+            <p>&copy; 2024 Tele Mental. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

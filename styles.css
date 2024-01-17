@@ -1,0 +1,327 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3644;
+   /* background-image: linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.6)),url('../tele mental imgs/home-section.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+*/
+}
+header {
+    background-color: #3498db;
+    padding: 1rem;}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #0f0f0f9f;
+}
+
+.home-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.home {
+    background-color: #f5f5f5;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+.home-image img{
+    height: 222px;
+    width: 256px;
+    border-radius: 96% 4% 94% 6% / 37% 43% 57% 63% ;
+}
+.home-content h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 15px 50px 30px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+}
+
+/* Style the services section */
+.services {
+    background-color: #f5f5f5;
+    padding: 80px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 0.1px;
+    align-content: center;
+    margin-left: 600px;
+}
+
+.services .service {
+    max-width: 300px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: #04667744;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+
+.services h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.services p {
+    color: #0f0f0ffb;
+    font-size: 16px;
+}
+.service img{
+    height: 2cm;
+    border-radius: 50px 50px 50px 50px;
+}
+
+/* Style the about section */
+.about {
+    background-color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.about:hover {
+    background-color: rgb(119, 119, 151);
+    color: white;}
+
+.about .vision-mission {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about .vision,
+.about .mission {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #04667744;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about p {
+    color: #0f0f0ffb;
+    font-size: 16px;
+}
+.about img{
+    height: 2cm;
+    border-radius: 50px 50px 50px 50px;
+}
+
+/* Style the stages section */
+.stages {
+    background-color: #f5f5f5;
+    padding: 80px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stages .stage {
+    max-width: 300px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: #04667744;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stages h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.stages p {
+    color: #0f0f0ffb;
+    font-size: 16px;
+
+}
+.stages img{
+    height: 2cm;
+    border-radius: 50px 50px 50px 50px;
+}
+
+
+/* css for contact us */
+.contact {
+    background-color: #f5f5f5;
+    padding: 15px 7.5px; /* Reduced padding */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+    
+}
+
+form {
+    display: grid;
+    gap: 15px;
+    
+}
+
+.contact label {
+    font-size: 16px;
+    color: #070707fa;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* css for appointiment page*/
+
+section {
+    padding: 50px 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px 50px 30px;
+    cursor: pointer;
+}
+#appointment h1{
+    color: white;
+}

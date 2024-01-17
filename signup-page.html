@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup-page.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tele Mental</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#About Us">About Us</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Contact us">Contact us</a></li>
+                <li><a href="#Call us on">Call us on</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="signup" class="signup">
+            <div class="signup-container">
+                <h2>Sign Up</h2>
+                <form action="process_signup.php" method="post">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">Sign Up</button>
+                </form>
+
+                <p>Already have an account? <a href="login-page.html">Login</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Contact us at: hafidele9@gmail.com | Phone: +250789831961</p>
+            <p>&copy; 2024 Tele Mental. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

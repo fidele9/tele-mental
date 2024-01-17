@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin-dashboard.css">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="sidebarToggle">&#9776;</div>
+            <div class="logo">Tele Mental</div>
+
+            <ul>
+                <li class="dropdown">
+                    <img src="../tele mental imgs/admin.png" alt="">
+                    <div class="dropdown-content">
+                        <a href="#">Profile</a>
+                        <a href="#">Change Password</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="sidebar" class="sidebar">
+            <div class="admin-sidebar">
+                <ul>
+                    <li><a href="admin dashboard.htmladmin-dashboard" class="Dashboard-link">Dashboard</a></li>
+                    <li><a href="index.html" class="home-link">Home</a></li>
+                    <li><a href="#users" class="users-link">Users</a></li>
+                    <li><a href="#appointments" class="appointments-link">Appointments</a></li>
+                    <li><a href="#Clients-history" class="Clients-history-link">Clients-history</a></li>
+                    <li><a href="#reports" class="reports-link">Reports</a></li>
+                    <li><a href="#settings" class="settings-link">Settings</a></li>
+                    <!-- Logout button -->
+                    <li><a href="#logout" class="logout-link">Logout</a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="Dashboard-contents" class="Dashboard-contents">
+            <!-- Section overview -->
+            <section id="overview">
+                <h2>Overview</h2>
+                <p>Be dedicated to change the way in which people see mental illness at all levels of society.<br> 
+            If not for yourself, advocate for those who are struggling in silence.</p>
+            </section>
+
+            <!-- Section Attendance -->
+            <section id="tele-mental-attendee" class="tele-mental-attendee">
+
+                <div class="attendence">
+
+                    <h3>Total clients</h3>
+                    <h1> 300</h1>
+                </div>
+                <div class="attendence">
+
+                    <h3>Total Consulteted</h3>
+                    <h1> 250</h1>
+                </div>
+                <div class="attendence">
+
+                    <h3>System users</h3>
+                    <h1> 10</h1>
+                </div>
+            </section>
+
+            <!-- Section performance -->
+            <section id="tele-mental-performance">
+                <h2>performance</h2>
+                <img src="../tele mental imgs/perfomance.png" alt="">
+            </section>
+        </section>
+    </main>
+    <footer>
+        <!-- Footer content goes here -->
+        <div class="container">
+            <p>Contact us at: hafidele9@gmail.com | Phone: +250789831961</p>
+            <p>&copy; 2024 Tele Mental. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle sidebar visibility
+        document.getElementById('sidebarToggle').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.toggle('sidebar-hidden');
+        });
+
+
+        //for profile drop down
+        document.querySelector('.dropdown').addEventListener('click', function() {
+        var dropdownContent = this.querySelector('.dropdown-content');
+        dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+    });
+    </script>
+</body>
+
+</html>

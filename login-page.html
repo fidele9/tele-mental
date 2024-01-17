@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tele Mental</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#About Us">About Us</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Contact us">Contact us</a></li>
+                <li><a href="#Call us on">Call us on</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login" class="login">
+            <div class="login-container">
+                <h2>Login</h2>
+                <form action="process_login.php" method="post">
+                    <label for="userType">Select User Type:</label>
+                    <select id="userType" name="userType" required>
+                        <option value="admin">Admin</option>
+                        <option value="client">Psychologist</option>
+                    </select>
+
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+<!-- this will be used to set condition -->
+                    <!--<button type="submit">Login</button>-->
+                    <a href="admin-dashboard.html" class="cta-button">Login</a>
+                </form>
+                <p>Don't have an account? <a href="signup-page.html">Sign Up</a></p>
+            </div>
+        </section>
+    </main>
+    <!-- Footer content goes here -->
+    <footer>
+
+        <div class="container">
+            <p>Contact us at: hafidele9@gmail.com | Phone: +250789831961</p>
+            <p>&copy; 2024 Tele Mental. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
