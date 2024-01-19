@@ -13,11 +13,11 @@
         <nav>
             <div class="logo">Tele Mental</div>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#About Us">About Us</a></li>
-                <li><a href="#Services">Services</a></li>
-                <li><a href="#Contact us">Contact us</a></li>
-                <li><a href="#Call us on">Call us on</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About Us</a></li>
+                <li><a href="index.html">Services</a></li>
+                <li><a href="index.html">Contact us</a></li>
+                <li><a href="index.html">Call us on</a></li>
             </ul>
         </nav>
     </header>
@@ -26,11 +26,12 @@
         <section id="login" class="login">
             <div class="login-container">
                 <h2>Login</h2>
-                <form action="process_login.php" method="post">
+                <form action="process_login.php" method="post" id="loginForm">
                     <label for="userType">Select User Type:</label>
                     <select id="userType" name="userType" required>
                         <option value="admin">Admin</option>
-                        <option value="client">Psychologist</option>
+                        <option value="psychologist">Psychologist</option>
+                        <option value="client">Client</option>
                     </select>
 
                     <label for="username">Username:</label>
@@ -38,19 +39,17 @@
 
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
-<!-- this will be used to set condition -->
-                    <!--<button type="submit">Login</button>-->
-                    <a href="admin-dashboard.html" class="cta-button">Login</a>
+
+                    <button type="submit">Login</button>
                 </form>
                 <p>Don't have an account? <a href="signup-page.html">Sign Up</a></p>
             </div>
         </section>
     </main>
-    <!-- Footer content goes here -->
-    <footer>
 
+    <footer>
         <div class="container">
-            <p>Contact us at: hafidele9@gmail.com | Phone: +250789831961</p>
+            <p>Contact us at: <a href="mailto:hafidele9@gmail.com">hafidele9@gmail.com</a> | Phone: +250789831961</p>
             <p>&copy; 2024 Tele Mental. All rights reserved.</p>
         </div>
     </footer>

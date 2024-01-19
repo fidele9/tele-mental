@@ -9,17 +9,35 @@
 </head>
 
 <body>
-    <script src="script.js"></script>
+    <script >
+        document.addEventListener('DOMContentLoaded', function () {
+    // Smooth scrolling for all links with hashes
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Get the target element's ID from the href attribute
+            const targetId = this.getAttribute('href').substring(1);
+
+            // Scroll into view with smooth behavior
+            document.getElementById(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+
+    </script>
     <header>
 
         <nav>
             <div class="logo">Tele mental</div>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#About Us">About Us</a></li>
-                <li><a href="#Services">Services</a></li>
-                <li><a href="#Contact us">Contact us</a></li>
-                <li><a href="#Call us on">Call us on</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact us</a></li>
+                <li><a href="#footer">Call us on</a></li>
             </ul>
         </nav>
     </header>
@@ -106,7 +124,7 @@
         <section id="contact" class="contact">
             <div class="contact-form">
                 <!--<h2 class="section-title">Contact Us</h2>-->
-                <form id="contactForm">
+                <form id="contactForm" onsubmit="sendEmail(); reset();return false;">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
 
@@ -124,11 +142,28 @@
     </main>
     <footer>
         <!-- Footer content goes here -->
-        <div class="container">
+        <div class="container" id="footer">
             <p>Contact us at: hafidele9@gmail.com | Phone: +250789831961</p>
             <p>&copy; 2024 Tele Mental. All rights reserved.</p>
         </div>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+    Host : "smtp.gmail.com",
+    Username : "hafidele9@mail.com",
+    Password : "DB7711FBA276A17B1C97F5D8E04B5AB8D714", //my gmailpassword to be entered
+    To : 'hafidele9@gmail.com',
+    From: document.getElementById("email").value,
+    Subject : "news",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+        }
+    </script>
+    
 </body>
 
 </html>

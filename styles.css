@@ -150,9 +150,7 @@ nav a:hover {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.about:hover {
-    background-color: rgb(119, 119, 151);
-    color: white;}
+
 
 .about .vision-mission {
     display: flex;

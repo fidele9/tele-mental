@@ -81,6 +81,7 @@ nav img{
 .admin-sidebar li {
     margin-bottom: 0.5rem;
     display: block;
+    margin-top: 1cm;
 }
 
 .admin-sidebar a {

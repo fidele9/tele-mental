@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="admin-dashboard.css">
-    <title>Admin Dashboard</title>
+    <title>Pyschologist-dashboard</title>
 </head>
 
 <body>
@@ -15,11 +15,14 @@
             <div class="logo">Tele Mental</div>
 
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">About Us</a></li>
-                <li><a href="index.html">Services</a></li>
-                <li><a href="index.html">Contact us</a></li>
-                <li><a href="index.html">Call us on</a></li>
+                <li class="dropdown">
+                    <img src="../tele mental imgs/admin.png" alt="">
+                    <div class="dropdown-content">
+                        <a href="#">Profile</a>
+                        <a href="#">Change Password</a>
+                    </div>
+                </li>
+                
             </ul>
         </nav>
     </header>
@@ -27,8 +30,8 @@
         <section id="sidebar" class="sidebar">
             <div class="admin-sidebar">
                 <ul>
-                    <li><a href="admin dashboard.htmladmin-dashboard" class="Dashboard-link">Dashboard</a></li>
-                    <li><a href="index.html" class="home-link">Home</a></li>
+                    <li><a href="admin-dashboard.html" class="Dashboard-link">Dashboard</a></li>
+                    
                     <li><a href="#users" class="users-link">Users</a></li>
                     <li><a href="#appointments" class="appointments-link">Appointments</a></li>
                     <li><a href="#Clients-history" class="Clients-history-link">Clients-history</a></li>
@@ -43,7 +46,8 @@
             <!-- Section overview -->
             <section id="overview">
                 <h2>Overview</h2>
-                <p>This is the first section content.</p>
+                <p>Be dedicated to change the way in which people see mental illness at all levels of society.<br> 
+            If not for yourself, advocate for those who are struggling in silence.</p>
             </section>
 
             <!-- Section Attendance -->
@@ -52,28 +56,29 @@
                 <div class="attendence">
 
                     <h3>Total clients</h3>
-                    <p>Get personalized consultation from trusted mental health professionals.</p>
+                    <h1> 300</h1>
                 </div>
                 <div class="attendence">
 
                     <h3>Total Consulteted</h3>
-                    <p>Explore various therapeutic approaches to improve your mental well-being.</p>
+                    <h1> 250</h1>
                 </div>
                 <div class="attendence">
 
                     <h3>System users</h3>
-                    <p>Access educational resources to learn more about mental health and well-being.</p>
+                    <h1> 10</h1>
                 </div>
             </section>
 
             <!-- Section performance -->
             <section id="tele-mental-performance">
                 <h2>performance</h2>
-                <p>This is the third section content.</p>
+                <img src="../tele mental imgs/perfomance.png" alt="">
             </section>
         </section>
     </main>
     <footer>
+        <!-- Footer content goes here -->
         <div class="container">
             <p>Contact us at: hafidele9@gmail.com | Phone: +250789831961</p>
             <p>&copy; 2024 Tele Mental. All rights reserved.</p>
@@ -85,6 +90,13 @@
         document.getElementById('sidebarToggle').addEventListener('click', function () {
             document.getElementById('sidebar').classList.toggle('sidebar-hidden');
         });
+
+
+        //for profile drop down
+        document.querySelector('.dropdown').addEventListener('click', function() {
+        var dropdownContent = this.querySelector('.dropdown-content');
+        dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+    });
     </script>
 </body>
 

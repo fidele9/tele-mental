@@ -111,10 +111,19 @@
       </div>
     </form>
     <form id="form3">
-      <h3>Personal info</h3>
-      <input type="text" placeholder="first name" required>
-      <input type="text" placeholder="last name" required>
-      <input type="text" placeholder="moble no." required>
+      <h3>Confirm Request</h3>
+
+      
+      <p>Dear Valued Client,<br><br>
+
+        We extend our heartfelt gratitude to you for taking the courageous step towards addressing your 
+        mental health concerns. Embarking on the journey to mental well-being is a significant stride, and we commend your commitment to your personal growth.<br><br>
+        
+        In times of struggle, it's essential to remember that there is always hope, even when the mind tries to convince you otherwise.</p>
+        <br><br><h4>Press submit to send your Appointment Request</h4>
+
+
+
       <div class="btn-box">
         <button type="button" id="back2">back</button>
         <button type="submit">submit</button>
@@ -142,26 +151,26 @@
     var progress = document.getElementById("progress");
 
     next1.onclick = function () {
-      form1.style.left = "-450px";
-      form2.style.left = "40px";
+      form1.style.left = "-570px";
+      form2.style.left = "55px";
       progress.style.width = "240px"
     }
 
     back1.onclick = function () {
-      form1.style.left = "40px";
-      form2.style.left = "450px";
+      form1.style.left = "55px";
+      form2.style.left = "570px";
       progress.style.width = "120px"
     }
 
     next2.onclick = function () {
-      form2.style.left = "-450px";
-      form3.style.left = "40px";
+      form2.style.left = "-570px";
+      form3.style.left = "55px";
       progress.style.width = "360px"
     }
 
     back2.onclick = function () {
-      form2.style.left = "40px";
-      form3.style.left = "450px";
+      form2.style.left = "55px";
+      form3.style.left = "570px";
       progress.style.width = "240px"
     }
 
