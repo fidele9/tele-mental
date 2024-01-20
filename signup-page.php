@@ -1,3 +1,27 @@
+<?php
+session_start();
+include("db.php");
+if ($_SERVER['REQUEST_METHOD']=="POST"){
+
+    $names= $_POST['names'];
+    $email= $_POST['email'];
+    $user_type= $_POST['user_type'];
+    $password= $_POST['password'];
+
+}
+if (!empty($email) && !empty($password)){
+$query = "INSERT INTO `users`(`Names`, `Email`, `User-type`, `Password`) VALUES ('$names','$email','$user_type','$password')";
+mysqli_query($con,$query);
+echo "<script type='text/javascript'> alert('sucessifully signed up')</script>";
+}
+else{
+    echo "<script type='text/javascript'> alert('please provide usefull and correct informations')</script>"; 
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,12 +50,15 @@
         <section id="signup" class="signup">
             <div class="signup-container">
                 <h2>Clients Sign Up</h2>
-                <form action="process_signup.php" method="post">
-                    <label for="fullName">Full Name:</label>
-                    <input type="text" id="fullName" name="fullName" required>
+                <form method="POST">
+                    <label for="Names">Names:</label>
+                    <input type="text" id="Names" name="names" required>
 
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
+
+                   <!-- <label for="User-type">User-type:</label>-->
+                    <input type="text" id="User_type" name="user_type"  value="Clients" required readonly >
 
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
