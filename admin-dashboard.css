@@ -107,7 +107,7 @@ nav img{
 }
 
 #sidebar li a.Dashbord-link {
-    background: url('../tele mental imgs/dashboard.png') no-repeat left center;
+    background: url("./images/dashboard.png") no-repeat left center;
     background-size: 20px;
     padding-left: 30px;
     display: flex;
@@ -117,7 +117,7 @@ nav img{
 }
 
 #sidebar li a.home-link {
-    background: url('../tele mental imgs/home.png') no-repeat left center;
+    background: url('./images/home.png') no-repeat left center;
     background-size: 20px;
     padding-left: 30px;
     display: flex;
@@ -136,41 +136,41 @@ nav img{
 }
 
 #sidebar li a.Dashboard-link {
-    background-image: url('../tele mental imgs/dashboard.jpg');
+    background-image: url('./images/dashboard.jpg');
     background-size: 20px;
 }
 
 #sidebar li a.home-link {
-    background-image: url('../tele mental imgs/home.png');
+    background-image: url('../images/home.png');
     background-size: 20px;
 }
 
 #sidebar li a.users-link {
-    background-image: url('../tele mental imgs/users.png');
+    background-image: url('./images/users.png');
     background-size: 20px;
 }
 
 #sidebar li a.appointments-link {
-    background-image: url('../tele mental imgs/notification.png');
+    background-image: url('./images/notification.png');
     background-size: 20px;
 }
 
 #sidebar li a.Clients-history-link {
-    background-image: url('../tele mental imgs/Clients-history.png');
+    background-image: url('./images/Clients-history.png');
     background-size: 20px;
 }
 #sidebar li a.reports-link {
-    background-image: url('../tele mental imgs/reports.png');
+    background-image: url('./images/reports.png');
     background-size: 20px;
 }
 
 #sidebar li a.settings-link {
-    background-image: url('../tele mental imgs/settings.png');
+    background-image: url('./images/background.jpg');
     background-size: 20px;
 }
 
 #sidebar li a.logout-link {
-    background-image: url('../tele mental imgs/logout.png');
+    background-image: url('./images/logout.png');
     background-size: 20px;
 }
 

@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     // Use prepared statements to prevent SQL injection
-    $query = "SELECT * FROM users WHERE `User-type` = ? AND `Email` = ? AND `Password` = ?";
+    $query = "SELECT * FROM users WHERE `User_type` = ? AND `Email` = ? AND `Password` = ?";
     $stmt = $conn->prepare($query);
 
     // Check if the statement preparation was successful

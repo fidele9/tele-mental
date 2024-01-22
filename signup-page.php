@@ -73,7 +73,7 @@ else{
 
     <footer>
         <div class="container">
-            <p>Contact us at: hafidele9@gmail.com | Phone: +250789831961</p>
+        <p>Contact us at: <a href="mailto:hafidele9@gmail.com">hafidele9@gmail.com</a> | Phone: +250789831961</p>
             <p>&copy; 2024 Tele Mental. All rights reserved.</p>
         </div>
     </footer>

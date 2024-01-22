@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="admin-dashboard.css">
     <title>Admin-Dashboard-user</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                         <a href="#">Change Password</a>
                     </div>
                 </li>
-                
+
             </ul>
         </nav>
     </header>
@@ -31,7 +32,7 @@
             <div class="admin-sidebar">
                 <ul>
                     <li><a href="admin-dashboard.html" class="Dashboard-link">Dashboard</a></li>
-                    
+
                     <li><a href="#users" class="users-link">Users</a></li>
                     <li><a href="#appointments" class="appointments-link">Appointments</a></li>
                     <li><a href="#Clients-history" class="Clients-history-link">Clients-history</a></li>
@@ -43,14 +44,80 @@
             </div>
         </section>
         <section id="Dashboard-contents" class="Dashboard-contents">
-            
-            
+
+
+
+
+
+
+
+
+            <div class="container my-5">
+                <h2>LIST OF USERS</h2>
+                <a class='btn btn-primary' href='/TELE-MENTAL/create.php' role='button'>new user</a><br>
+                <table border='1' class="table">
+                    <thead>
+                        <tr>
+                            <th>user_ID</th>
+                            <th>Names</th>
+                            <th>Email</th>
+                            <th>User-type</th>
+                            <th>Password</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+
+// Database connection details
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "Tele-mental-db";
+
+$connection=new mysqli($host,$username,$password,$database);
+//to check our connection errors
+if ($connection->connect_error){
+    die("connection faled".$connection->connect_error);
+
+}
+ //if no connection error read all element of users table
+ $sql="SELECT*FROM users";
+ $result= $connection->query($sql);
+
+if(!$result){
+    die("invalid records".$connection->error);
+}
+//to read the data of each row
+while($row = $result->fetch_assoc()){
+
+    echo"
+    <tr>
+    <td >$row[user_ID]</td>
+    <td>$row[Names]</td>
+    <td>$row[Email]</td>
+    <td>$row[User_type]</td>
+    <td>$row[Password]</td>
+    <td>
+    <a class='btn btn-primary btn-sm' href='/TELE-MENTAL/edit.php? id=$row[user_ID]' role='button'>edit</a>
+    <a class='btn btn-danger btn-sm' href='/TELE-MENTAL/delete.php? id=$row[user_ID]' role='button'>delete</a>
+    </td>
+</tr>
+ ";
+}
+
+?>
+                    </tbody>
+                </table>
+            </div>
+
+
+
         </section>
     </main>
     <footer>
         <!-- Footer content goes here -->
         <div class="container">
-            <p>Contact us at: hafidele9@gmail.com | Phone: +250789831961</p>
+            <p>Contact us at: <a href="mailto:hafidele9@gmail.com">hafidele9@gmail.com</a> | Phone: +250789831961</p>
             <p>&copy; 2024 Tele Mental. All rights reserved.</p>
         </div>
     </footer>
@@ -63,10 +130,10 @@
 
 
         //for profile drop down
-        document.querySelector('.dropdown').addEventListener('click', function() {
-        var dropdownContent = this.querySelector('.dropdown-content');
-        dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
-    });
+        document.querySelector('.dropdown').addEventListener('click', function () {
+            var dropdownContent = this.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+        });
     </script>
 </body>
 
