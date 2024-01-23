@@ -58,7 +58,7 @@ else{
                     <input type="email" id="email" name="email" required>
 
                    <!-- <label for="User-type">User-type:</label>-->
-                    <input type="text" id="User_type" name="user_type"  value="Clients" required readonly >
+                    <input type="text" id="User_type" name="user_type"  value="Clients" required readonly hidden >
 
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>

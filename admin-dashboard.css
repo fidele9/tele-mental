@@ -165,7 +165,7 @@ nav img{
 }
 
 #sidebar li a.settings-link {
-    background-image: url('./images/background.jpg');
+    background-image: url('./images/settings.png');
     background-size: 20px;
 }
 
@@ -188,6 +188,32 @@ main {
     display: block;
     padding: 0px;
     margin: 0px;
+    background-color: #e6eaf0e1;
+    height: 100vh;
+    max-height: 300vh;
+    width: 90%;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #df1892;
+    color: #fff;
+    border-radius: 15px 50px 30px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #a61363; /* Adjust the hover background color as needed */
+}
+
+/*
+.Dashboard-contents {
+    display: block;
+    padding: 0px;
+    margin: 0px;
     background-color: #0b1931e1;
     height: 100vh;
     max-height: 300vh;
@@ -195,6 +221,16 @@ main {
     width: 90%;
 }
 
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #df1892;
+    color: #fff;
+    border-radius: 15px 50px 30px;
+    transition: background-color 0.3s ease;
+}*/
 #overview {
     background-color: #0b1931f5;
     padding: 20px;

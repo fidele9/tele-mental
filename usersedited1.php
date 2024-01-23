@@ -57,7 +57,7 @@ while($row = $result->fetch_assoc()){
     <td>$row[Password]</td>
     <td>
     <a class='btn btn-primary btn-sm' href='edit.php? user_ID=$row[user_ID]'>edit</a>
-    <a class='btn btn-danger btn-sm' href='delete.php?id=<?php echo urlencode($row[user_ID]); ?>' role='button'>delete</a>
+    <a class='btn btn-danger btn-sm' href='deleteUser.php?user_ID=$row[user_ID]'>delete</a>
     
 
     </td>

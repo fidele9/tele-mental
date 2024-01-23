@@ -44,11 +44,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: admin-dashboard.html");
                 exit();
             case "psychologist":
-                header("Location: psychologist-dashboard.html");
+                header("Location: pyschologist-dashboard.html");
                 exit();
             case "Clients":
                 // Redirect to a default page if user type is not recognized
-                header("Location: client-dashboard.html");
+                header("Location: client_dashboard.html");
+                exit();
+                default:
+                header ("Location: client_dashboard.html");
                 exit();
         }
     } else {

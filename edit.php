@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     $user_ID = $_GET["user_ID"];
     
     if(!isset($_GET["user_ID"])){
-        header("location: user.php");
+        header("location: users.php");
         exit;
     }
 
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
     //if row is empty
     if (!$row) {
-        header("location: user.php");
+        header("location: users.php");
         exit;
     }
 
@@ -65,7 +65,7 @@ else {
         }
 
         $successMessage = "Successfully user updated";
-        header("location: user.php");
+        header("location: users.php");
         exit;
     } while (false);
 }
@@ -146,7 +146,7 @@ else {
                 </div>
 
                 <div class="col-sm-3 d-grid">
-                    <a class='btn btn-outline-primary' href='user.php' role='button'>cancel</a>
+                    <a class='btn btn-outline-primary' href='users.php' role='button'>cancel</a>
                 </div>
             </div>
 

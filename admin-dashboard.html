@@ -32,13 +32,15 @@
                 <ul>
                     <li><a href="admin-dashboard.html" class="Dashboard-link">Dashboard</a></li>
                     
-                    <li><a href="admin-dashboard-users.html" class="users-link">Users</a></li>
+                    <li><a href="users.php" class="users-link">Users</a></li>
                     <li><a href="Admin-Dashboard-appointiments.html" class="appointments-link">Appointments</a></li>
                     <li><a href="Admin-Dashboard-client-history.html" class="Clients-history-link">Clients-history</a></li>
                     <li><a href="#reports" class="reports-link">Reports</a></li>
                     <li><a href="#settings" class="settings-link">Settings</a></li>
                     <!-- Logout button -->
-                    <li><a href="#logout" class="logout-link">Logout</a></li>
+                   <!-- <li><a href="#logout" class="logout-link">Logout</a></li>-->
+                    <li><a href="logout.php" class="logout-link">Logout</a></li>
+
                 </ul>
             </div>
         </section>
@@ -96,6 +98,13 @@
         document.querySelector('.dropdown').addEventListener('click', function() {
         var dropdownContent = this.querySelector('.dropdown-content');
         dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+
+ // Logout functionality
+ document.querySelector('.logout-link').addEventListener('click', function() {
+        // Redirect to the logout script
+        window.location.href = 'logout.php';
+    });
+
     });
     </script>
 </body>

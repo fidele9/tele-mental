@@ -17,7 +17,7 @@
 
             <ul>
                 <li class="dropdown">
-                    <img src="../tele mental imgs/admin.png" alt="">
+                    <img src=".images/admin.png" alt="">
                     <div class="dropdown-content">
                         <a href="#">Profile</a>
                         <a href="#">Change Password</a>
@@ -39,79 +39,16 @@
                     <li><a href="#reports" class="reports-link">Reports</a></li>
                     <li><a href="#settings" class="settings-link">Settings</a></li>
                     <!-- Logout button -->
-                    <li><a href="#logout" class="logout-link">Logout</a></li>
+                    <li><a href="logout.php" class="logout-link">Logout</a></li>
                 </ul>
             </div>
         </section>
         <section id="Dashboard-contents" class="Dashboard-contents">
 
-
-
-
-
-
-
-
-            <div class="container my-5">
-                <h2>LIST OF USERS</h2>
-                <a class='btn btn-primary' href='/TELE-MENTAL/create.php' role='button'>new user</a><br>
-                <table border='1' class="table">
-                    <thead>
-                        <tr>
-                            <th>user_ID</th>
-                            <th>Names</th>
-                            <th>Email</th>
-                            <th>User-type</th>
-                            <th>Password</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-
-// Database connection details
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "Tele-mental-db";
-
-$connection=new mysqli($host,$username,$password,$database);
-//to check our connection errors
-if ($connection->connect_error){
-    die("connection faled".$connection->connect_error);
-
-}
- //if no connection error read all element of users table
- $sql="SELECT*FROM users";
- $result= $connection->query($sql);
-
-if(!$result){
-    die("invalid records".$connection->error);
-}
-//to read the data of each row
-while($row = $result->fetch_assoc()){
-
-    echo"
-    <tr>
-    <td >$row[user_ID]</td>
-    <td>$row[Names]</td>
-    <td>$row[Email]</td>
-    <td>$row[User_type]</td>
-    <td>$row[Password]</td>
-    <td>
-    <a class='btn btn-primary btn-sm' href='/TELE-MENTAL/edit.php? id=$row[user_ID]' role='button'>edit</a>
-    <a class='btn btn-danger btn-sm' href='/TELE-MENTAL/delete.php? id=$row[user_ID]' role='button'>delete</a>
-    </td>
-</tr>
- ";
-}
-
-?>
-                    </tbody>
-                </table>
-            </div>
-
-
-
+            <?php
+            // Include the user.php file content
+            include('user.php');
+        ?>
         </section>
     </main>
     <footer>
