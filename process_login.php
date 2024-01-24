@@ -1,6 +1,25 @@
 <?php
 session_start();
 
+// Check if the user is already logged in
+if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
+    // Redirect to the respective dashboard based on user type
+    switch ($_SESSION["user_type"]) {
+        case "admin":
+            header("Location: admin-dashboard.html");
+            exit();
+        case "psychologist":
+            header("Location: psychologist-dashboard.html");
+            exit();
+        case "Clients":
+            header("Location: client_dashboard.html");
+            exit();
+        default:
+            header("Location: client_dashboard.html");
+            exit();
+    }
+}
+
 // Database connection details
 $host = "localhost";
 $username = "root";
@@ -37,21 +56,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Valid credentials, set session variables
         $_SESSION["user_type"] = $userType;
         $_SESSION["username"] = $username;
+        $_SESSION["logged_in"] = true;
+        $_SESSION["login_time"] = time(); // Store the timestamp of the login
 
         // Redirect based on user type
         switch ($userType) {
             case "admin":
-                header("Location: admin-dashboard.html");
+                header("Location: admin-dashboard.php");
                 exit();
             case "psychologist":
-                header("Location: pyschologist-dashboard.html");
+                header("Location: psychologist-dashboard.html");
                 exit();
-            case "Clients":
+            case "Client":
                 // Redirect to a default page if user type is not recognized
                 header("Location: client_dashboard.html");
                 exit();
-                default:
-                header ("Location: client_dashboard.html");
+            default:
+                header("Location: client_dashboard.html");
                 exit();
         }
     } else {

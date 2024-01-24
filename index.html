@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <script >
+    <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
     // Smooth scrolling for all links with hashes
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -26,7 +26,6 @@
         });
     });
 });
-
     </script>
     <header>
 
@@ -124,7 +123,8 @@
         <section id="contact" class="contact">
             <div class="contact-form">
                 <!--<h2 class="section-title">Contact Us</h2>-->
-                <form id="contactForm" onsubmit="sendEmail(); reset();return false;">
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" onsubmit="sendEmail(); reset();return false;">
+                    <input type="hidden" name="access_key" value="83af77b0-7926-437c-a560-20e4a2b0863e">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
 
@@ -147,22 +147,7 @@
             <p>&copy; 2024 Tele Mental. All rights reserved.</p>
         </div>
     </footer>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail(){
-            Email.send({
-    Host : "smtp.gmail.com",
-    Username : "hafidele9@mail.com",
-    Password : "DB7711FBA276A17B1C97F5D8E04B5AB8D714", //my gmailpassword to be entered
-    To : 'hafidele9@gmail.com',
-    From: document.getElementById("email").value,
-    Subject : "news",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
-        }
-    </script>
+ 
     
 </body>
 

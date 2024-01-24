@@ -43,7 +43,7 @@ nav a:hover {
 
 .container {
     width: 500px;
-    height: 1150px; /* Change height to auto to let it adjust based on content */
+    height: 1210px; /* Change height to auto to let it adjust based on content */
     margin: 8% auto;
     background: #fff;
     border-radius: 5px;
