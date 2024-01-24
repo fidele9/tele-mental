@@ -1,0 +1,11 @@
+/* Inside settings.css */
+body {
+    font-family: 'Arial', sans-serif; /* Default font */
+}
+
+body.dark-mode {
+    background-color: #e71010; /* Dark mode background color */
+    color: #fff; /* Dark mode text color */
+}
+
+/* Add more styles for other settings as needed */

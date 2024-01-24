@@ -26,10 +26,17 @@ nav {
     align-items: center;
 }
 
-nav .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 29px; /* Set the desired font size for the logo text */
+    font-weight: bold; /* Adjust font weight if needed */
+}
+
+.logo img {
+    width: 100px; /* Set the desired width for the logo image */
+    height: auto; /* Maintain aspect ratio while adjusting width */
+    margin-right: 10px; /* Adjust spacing between image and text */
 }
 
 nav ul {

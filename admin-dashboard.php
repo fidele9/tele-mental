@@ -8,24 +8,20 @@
     <title>Admin Dashboard</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-
     <?php include 'gettotalusers.php'; ?>
     <?php include 'getTotalClients.php'; ?>
     <script type="text/javascript">
         // Assign the PHP variable value to a JavaScript variable
-        var totalClients = <?php  echo json_encode($totalClients); ?>;
-        var totalClients = <?php echo json_encode($totalusers); ?>;
-
+        var totalClients = <?php echo json_encode($totalClients); ?>;
+        var totalUsers = <?php echo json_encode($totalusers); ?>;
     </script>
-
-
 </head>
 
 <body>
     <header>
         <nav>
             <div id="sidebarToggle">&#9776;</div>
-            <div class="logo">Tele Mental</div>
+            <div class="logo"><img src="./images/logoicon22.png" alt="" />Tele mental</div>
 
             <ul>
                 <li class="dropdown">
@@ -35,7 +31,6 @@
                         <a href="#">Change Password</a>
                     </div>
                 </li>
-
             </ul>
         </nav>
     </header>
@@ -44,17 +39,12 @@
             <div class="admin-sidebar">
                 <ul>
                     <li><a href="admin-dashboard.html" class="Dashboard-link">Dashboard</a></li>
-
                     <li><a href="users.php" class="users-link">Users</a></li>
-                    <li><a href="Admin-Dashboard-appointiments.html" class="appointments-link">Appointments</a></li>
-                    <li><a href="Admin-Dashboard-client-history.html" class="Clients-history-link">Clients-history</a>
-                    </li>
+                    <li><a href="Admin-Dashboard-appointments.html" class="appointments-link">Appointments</a></li>
+                    <li><a href="Admin-Dashboard-client-history.html" class="Clients-history-link">Clients-history</a></li>
                     <li><a href="#reports" class="reports-link">Reports</a></li>
-                    <li><a href="#settings" class="settings-link">Settings</a></li>
-                    <!-- Logout button -->
-                    <!-- <li><a href="#logout" class="logout-link">Logout</a></li>-->
+                    <li><a href="settings.php" class="settings-link">Settings</a></li>
                     <li><a href="logout.php" class="logout-link">Logout</a></li>
-
                 </ul>
             </div>
         </section>
@@ -70,24 +60,24 @@
             <section id="tele-mental-attendee" class="tele-mental-attendee">
                 <div class="attendance">
                     <h3>Total clients</h3>
-                    <h1 id="totalClients"><?php  echo json_encode($totalClients); ?></h1>
+                    <h1 id="totalClients"><?php echo json_encode($totalClients); ?></h1>
                 </div>
-                <div class="attendence">
-
-                    <h3>Total Consulteted</h3>
+                <div class="attendance">
+                    <h3>Total Consulted</h3>
                     <h1> 250</h1>
                 </div>
-                <div class="attendence">
-
-                    <h3>System users</h3>
-                    <h1 id="totalusers"> <?php echo json_encode($totalusers); ?></h1>
+                <div class="attendance">
+                    <h3>Total Users</h3>
+                    <h1 id="totalUsers"><?php echo json_encode($totalUsers); ?></h1>
                 </div>
             </section>
 
-            <!-- Section performance -->
+            <!-- Section performance       <img src="../images/performance.png" alt="">-->
             <section id="tele-mental-performance">
                 <h2>performance</h2>
-                <img src="./images/perfomance.png" alt="">
+               
+                <img src="/projects%20innolab/tele-mental/images/performance.png" alt="">
+
             </section>
         </section>
     </main>
@@ -105,8 +95,7 @@
             document.getElementById('sidebar').classList.toggle('sidebar-hidden');
         });
 
-
-        //for profile drop down
+        // for profile drop-down
         document.querySelector('.dropdown').addEventListener('click', function () {
             var dropdownContent = this.querySelector('.dropdown-content');
             dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
@@ -116,20 +105,29 @@
                 // Redirect to the logout script
                 window.location.href = 'logout.php';
             });
-            // Update the total clients value in the HTML when the document is ready
-            $(document).ready(function () {
-                document.getElementById('totalClients').innerText = totalClients;
-            });
-
-
- // Update the total user value in the HTML when the document is ready
- $(document).ready(function () {
-                document.getElementById('totalusers').innerText = totalusers;
-            });
-
         });
 
+        // Check if there are saved settings in localStorage
+        const savedSettings = localStorage.getItem('dashboardSettings');
+        if (savedSettings) {
+            const settings = JSON.parse(savedSettings);
 
+            // Apply saved settings
+            if (settings.fontFamily) {
+                document.body.style.fontFamily = settings.fontFamily;
+            }
+
+            if (settings.darkMode) {
+                // Apply dark mode styles
+                document.body.classList.add('dark-mode');
+            }
+        }
+
+        // Update the total clients value in the HTML when the document is ready
+        $(document).ready(function () {
+            document.getElementById('totalClients').innerText = totalClients;
+            document.getElementById('totalUsers').innerText = totalUsers;
+        });
     </script>
 </body>
 

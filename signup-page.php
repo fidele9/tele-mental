@@ -35,7 +35,7 @@ else{
 <body>
     <header>
         <nav>
-            <div class="logo">Tele Mental</div>
+        <div class="logo"><img src="./images/logoicon22.png" alt="" />Tele mental</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html">About Us</a></li>
