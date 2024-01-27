@@ -34,7 +34,7 @@ nav {
 }
 
 .logo img {
-    width: 100px; /* Set the desired width for the logo image */
+    width: 50px; /* Set the desired width for the logo image */
     height: auto; /* Maintain aspect ratio while adjusting width */
     margin-right: 10px; /* Adjust spacing between image and text */
 }

@@ -21,7 +21,7 @@
     <header>
         <nav>
             <div id="sidebarToggle">&#9776;</div>
-            <div class="logo"><img src="./images/logoicon22.png" alt="" />Tele mental</div>
+            <div class="logo"><img src="./images/logoicon3.png" alt="" />Tele mental</div>
 
             <ul>
                 <li class="dropdown">
@@ -68,7 +68,7 @@
                 </div>
                 <div class="attendance">
                     <h3>Total Users</h3>
-                    <h1 id="totalUsers"><?php echo json_encode($totalUsers); ?></h1>
+                    <h1 id="totalUsers"><?php echo json_encode($totalusers); ?></h1>
                 </div>
             </section>
 

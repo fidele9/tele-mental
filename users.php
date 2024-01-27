@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="admin-dashboard.css">
     <title>Admin-Dashboard-user</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
     <header>
         <nav>
             <div id="sidebarToggle">&#9776;</div>
-            <div class="logo">Tele Mental</div>
+            <div class="logo"><img src="./images/logoicon3.png" alt="" />Tele mental</div>
 
             <ul>
                 <li class="dropdown">
-                    <img src=".images/admin.png" alt="">
+                    <img src="./images/admin.png" alt="">
                     <div class="dropdown-content">
                         <a href="#">Profile</a>
                         <a href="#">Change Password</a>
@@ -31,13 +32,13 @@
         <section id="sidebar" class="sidebar">
             <div class="admin-sidebar">
                 <ul>
-                    <li><a href="admin-dashboard.html" class="Dashboard-link">Dashboard</a></li>
+                    <li><a href="admin-dashboard.php" class="Dashboard-link">Dashboard</a></li>
 
                     <li><a href="#users" class="users-link">Users</a></li>
                     <li><a href="#appointments" class="appointments-link">Appointments</a></li>
                     <li><a href="#Clients-history" class="Clients-history-link">Clients-history</a></li>
                     <li><a href="#reports" class="reports-link">Reports</a></li>
-                    <li><a href="#settings" class="settings-link">Settings</a></li>
+                    <li><a href="settings.php" class="settings-link">Settings</a></li>
                     <!-- Logout button -->
                     <li><a href="logout.php" class="logout-link">Logout</a></li>
                 </ul>

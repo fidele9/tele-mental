@@ -7,7 +7,7 @@ body {
 
 header {
     background-color: #0b1931f5;
-    ;
+    
     padding: 1rem;
 }
 
@@ -22,6 +22,19 @@ nav .logo {
     font-weight: bold;
     color: white;
     margin-left: 0.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 29px; /* Set the desired font size for the logo text */
+    font-weight: bold; /* Adjust font weight if needed */
+}
+
+.logo img {
+    width: 60px; /* Set the desired width for the logo image */
+    height: auto; /* Maintain aspect ratio while adjusting width */
+    margin-right: 10px; /* Adjust spacing between image and text */
 }
 
 nav ul {
