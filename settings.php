@@ -48,22 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <option value="CoFo Sans">CoFo Sans</option>
             <option value="Lato">Lato</option>
             <option value="Abolition">Abolition</option>
-            <option value="Forum">Forum</option>
-            <option value="Sofia Pro">Sofia Pro</option>
-            <option value="Graphik">Graphik</option>
-            <option value="BD Supper">BD Supper</option>
-            <option value="Palatino">Palatino</option>
-            <option value="Barlow">Barlow</option>
-            <option value="Publico">Publico</option>
-            <option value="FS Me">FS Me</option>
-            <option value="Magnific Caos">Magnific Caos</option>
-            <option value="Diastema">Diastema</option>
-            <option value="Caponi">Caponi</option>
-            <option value="Caudex">Caudex</option>
-            <option value="Eleven Twenty">Eleven Twenty</option>
-            <option value="FS Ostro">FS Ostro</option>
-            <option value="Ratio Modern">Ratio Modern</option>
-            <option value="Lil Grotesk">Lil Grotesk</option>
             <option value="Poppins">Poppins</option>
         </select>
 

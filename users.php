@@ -32,14 +32,14 @@
         <section id="sidebar" class="sidebar">
             <div class="admin-sidebar">
                 <ul>
-                    <li><a href="admin-dashboard.php" class="Dashboard-link">Dashboard</a></li>
-
-                    <li><a href="#users" class="users-link">Users</a></li>
-                    <li><a href="#appointments" class="appointments-link">Appointments</a></li>
-                    <li><a href="#Clients-history" class="Clients-history-link">Clients-history</a></li>
+                <li><a href="admin-dashboard.php" class="Dashboard-link">Dashboard</a></li>
+                    <li><a href="users.php" class="users-link">Users</a></li>
+                    <li><a href="Admin-Dashboard-appointments.php" class="appointments-link">Appointments</a></li>
+                    <li><a href="Admin-Dashboard-client-history.html" class="Clients-history-link">Clients-history</a></li>
+                    <li><a href="#dinied.php" class="dinied-link">dinied</a></li>
+                    <li><a href="approved.php" class="approved-link">approved</a></li>
                     <li><a href="#reports" class="reports-link">Reports</a></li>
                     <li><a href="settings.php" class="settings-link">Settings</a></li>
-                    <!-- Logout button -->
                     <li><a href="logout.php" class="logout-link">Logout</a></li>
                 </ul>
             </div>

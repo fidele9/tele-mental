@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="admin-dashboard.css">
     <title>client_dashboard</title>
+
+    <script type="text/javascript">
+        function preventBack() { window.history.forward() };
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null; }
+    </script>
+
+
 </head>
 
 <body>
@@ -22,7 +30,7 @@
                         <a href="#">Change Password</a>
                     </div>
                 </li>
-                
+
             </ul>
         </nav>
     </header>
@@ -30,9 +38,9 @@
         <section id="sidebar" class="sidebar">
             <div class="admin-sidebar">
                 <ul>
-                    <li><a href="admin-dashboard.html" class="Dashboard-link">Dashboard</a></li>
-                    
-                   <!-- <li><a href="#users" class="users-link">Users</a></li> -->
+                    <li><a href="admin-dashboard.php" class="Dashboard-link">Dashboard</a></li>
+
+                    <!-- <li><a href="#users" class="users-link">Users</a></li> -->
                     <li><a href="#appointments_status" class="appointments-link">appointments_status</a></li>
                     <li><a href="#Clients-history" class="Clients-history-link">Clients-history</a></li>
                     <li><a href="#reports" class="reports-link">Reports</a></li>
@@ -43,7 +51,7 @@
             </div>
         </section>
         <section id="Dashboard-contents" class="Dashboard-contents">
-            
+
             <a href="make-appointimant.html" class="cta-button">Make Appointment</a>
         </section>
     </main>
@@ -63,17 +71,17 @@
 
 
         //for profile drop down
-        document.querySelector('.dropdown').addEventListener('click', function() {
-        var dropdownContent = this.querySelector('.dropdown-content');
-        dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+        document.querySelector('.dropdown').addEventListener('click', function () {
+            var dropdownContent = this.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
 
-// Logout functionality
-document.querySelector('.logout-link').addEventListener('click', function() {
-        // Redirect to the logout script
-        window.location.href = 'logout.php';
-    });
+            // Logout functionality
+            document.querySelector('.logout-link').addEventListener('click', function () {
+                // Redirect to the logout script
+                window.location.href = 'logout.php';
+            });
 
-    });
+        });
     </script>
 </body>
 

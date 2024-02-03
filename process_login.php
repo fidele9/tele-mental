@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: admin-dashboard.php");
                 exit();
             case "psychologist":
-                header("Location: psychologist-dashboard.html");
+                header("Location: psychologist-dashboard.php");
                 exit();
             case "Client":
                 // Redirect to a default page if user type is not recognized

@@ -94,7 +94,7 @@ nav img{
 .admin-sidebar li {
     margin-bottom: 0.5rem;
     display: block;
-    margin-top: 1cm;
+    margin-top: 0.5cm;
 }
 
 .admin-sidebar a {
@@ -149,7 +149,7 @@ nav img{
 }
 
 #sidebar li a.Dashboard-link {
-    background-image: url('./images/dashboard.jpg');
+    background-image: url('./images/dashboard.png');
     background-size: 20px;
 }
 
@@ -159,7 +159,7 @@ nav img{
 }
 
 #sidebar li a.users-link {
-    background-image: url('./images/users.png');
+    background-image: url('./images/user.png');
     background-size: 20px;
 }
 
@@ -170,6 +170,14 @@ nav img{
 
 #sidebar li a.Clients-history-link {
     background-image: url('./images/Clients-history.png');
+    background-size: 20px;
+}
+#sidebar li a.dinied-link {
+    background-image: url('./images/dinied.png');
+    background-size: 20px;
+}
+#sidebar li a.approved-link {
+    background-image: url('./images/approved.png');
     background-size: 20px;
 }
 #sidebar li a.reports-link {
@@ -183,7 +191,7 @@ nav img{
 }
 
 #sidebar li a.logout-link {
-    background-image: url('./images/logout.png');
+    background-image: url('./images/logouts.png');
     background-size: 20px;
 }
 
@@ -247,7 +255,7 @@ main {
 #overview {
     background-color: #0b1931f5;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 0px 0px 0px 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     justify-content: space-around;
 }
@@ -256,7 +264,7 @@ main {
     background-color: #0b1931f5;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
+    border-radius: 0px 0px 8px 8px;
     /*box-shadow: 0 0 10px rgba(197, 13, 13, 0.1);*/
     display:flex;
     justify-content: space-between;
@@ -272,7 +280,7 @@ main {
 #tele-mental-performance {
     background-color: #0b1931f5;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     justify-content: space-around;

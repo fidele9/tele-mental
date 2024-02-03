@@ -14,6 +14,15 @@
         // Assign the PHP variable value to a JavaScript variable
         var totalClients = <?php echo json_encode($totalClients); ?>;
         var totalUsers = <?php echo json_encode($totalusers); ?>;
+
+
+
+
+        function preventBack() { window.history.forward() };
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null; }
+
+
     </script>
 </head>
 
@@ -38,10 +47,13 @@
         <section id="sidebar" class="sidebar">
             <div class="admin-sidebar">
                 <ul>
-                    <li><a href="admin-dashboard.html" class="Dashboard-link">Dashboard</a></li>
+                    <li><a href="admin-dashboard.php" class="Dashboard-link">Dashboard</a></li>
                     <li><a href="users.php" class="users-link">Users</a></li>
-                    <li><a href="Admin-Dashboard-appointments.html" class="appointments-link">Appointments</a></li>
-                    <li><a href="Admin-Dashboard-client-history.html" class="Clients-history-link">Clients-history</a></li>
+                    <li><a href="Admin-Dashboard-appointments.php" class="appointments-link">Appointments</a></li>
+                    <li><a href="Admin-Dashboard-client-history.html" class="Clients-history-link">Clients-history</a>
+                    </li>
+                    <li><a href="#dinied.php" class="dinied-link">dinied</a></li>
+                    <li><a href="approved.php" class="approved-link">approved</a></li>
                     <li><a href="#reports" class="reports-link">Reports</a></li>
                     <li><a href="settings.php" class="settings-link">Settings</a></li>
                     <li><a href="logout.php" class="logout-link">Logout</a></li>
@@ -60,7 +72,9 @@
             <section id="tele-mental-attendee" class="tele-mental-attendee">
                 <div class="attendance">
                     <h3>Total clients</h3>
-                    <h1 id="totalClients"><?php echo json_encode($totalClients); ?></h1>
+                    <h1 id="totalClients">
+                        <?php echo json_encode($totalClients); ?>
+                    </h1>
                 </div>
                 <div class="attendance">
                     <h3>Total Consulted</h3>
@@ -68,14 +82,16 @@
                 </div>
                 <div class="attendance">
                     <h3>Total Users</h3>
-                    <h1 id="totalUsers"><?php echo json_encode($totalusers); ?></h1>
+                    <h1 id="totalUsers">
+                        <?php echo json_encode($totalusers); ?>
+                    </h1>
                 </div>
             </section>
 
             <!-- Section performance       <img src="../images/performance.png" alt="">-->
             <section id="tele-mental-performance">
                 <h2>performance</h2>
-               
+
                 <img src="/projects%20innolab/tele-mental/images/performance.png" alt="">
 
             </section>

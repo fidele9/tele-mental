@@ -14,9 +14,7 @@ $query = "INSERT INTO `users`(`Names`, `Email`, `User-type`, `Password`) VALUES 
 mysqli_query($con,$query);
 echo "<script type='text/javascript'> alert('sucessifully signed up')</script>";
 }
-else{
-    echo "<script type='text/javascript'> alert('please provide usefull and correct informations')</script>"; 
-}
+
 ?>
 
 
