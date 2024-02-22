@@ -6,16 +6,16 @@ if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
     // Redirect to the respective dashboard based on user type
     switch ($_SESSION["user_type"]) {
         case "admin":
-            header("Location: admin-dashboard.html");
+            header("Location: admin-dashboard.php");
             exit();
         case "psychologist":
-            header("Location: psychologist-dashboard.html");
+            header("Location: psychologist-dashboard.php");
             exit();
         case "Clients":
-            header("Location: client_dashboard.html");
+            header("Location: client_dashboard.php");
             exit();
         default:
-            header("Location: client_dashboard.html");
+            header("Location: client_dashboard.php");
             exit();
     }
 }

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,9 +19,11 @@
 
 
 
+
         function preventBack() { window.history.forward() };
         setTimeout("preventBack()", 0);
         window.onunload = function () { null; }
+
 
     </script>
 </head>
@@ -45,15 +49,13 @@
         <section id="sidebar" class="sidebar">
             <div class="admin-sidebar">
                 <ul>
-                    <li><a href="psychologist-dashboard.php" class="Dashboard-link">Dashboard</a></li>
-                    <!--<li><a href="users.php" class="users-link">Users</a></li>-->
-                    <li><a href="psychologist-Dashboard-appointments.php" class="appointments-link">Appointments</a></li>
-                    <li><a href="psychologist-Dashboard-client-history.html" class="Clients-history-link">Clients-history</a>
-                    </li>
-                    <li><a href="psychologist-dinied.php" class="dinied-link">dinied</a></li>
-                    <li><a href="psychologist-approved.php" class="approved-link">approved</a></li>
-                    <li><a href="psychologist-reports" class="reports-link">Reports</a></li>
-                    <li><a href="psychologist-settings.php" class="settings-link">Settings</a></li>
+                    <li><a href="client_dashboard.php" class="Dashboard-link">Dashboard</a></li>
+                    
+                    <li><a href="#client-appointments.php" class="appointments-link">Appointments_status</a></li>
+                    
+                 
+                    
+                    <li><a href="client-settings.php" class="settings-link">Settings</a></li>
                     <li><a href="logout.php" class="logout-link">Logout</a></li>
                 </ul>
             </div>
@@ -62,8 +64,12 @@
             <!-- Section overview -->
             <section id="overview">
                 <h2>Overview</h2>
-                <p>Be dedicated to change the way in which people see mental illness at all levels of society.<br>
-                    If not for yourself, advocate for those who are struggling in silence.</p>
+                <p>Welcome to Our Tele-Mental Health Service</p>
+
+                <p>Dear Esteemed Clients,
+
+A heartfelt thank you for choosing our tele-mental health services. Your commitment to prioritizing mental well-being is truly commendable. Together, we'll navigate this journey towards positive change and growth. Thank you for entrusting us with your mental health.</p>
+                    <a href="make-appointimant.php" class="cta-button">Make Appointment</a>
             </section>
 
             <!-- Section Attendance -->

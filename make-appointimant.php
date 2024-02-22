@@ -25,7 +25,8 @@
 
 <body>
   <div class="container">
-    <form id="form1">
+
+  <form id="form1" action="process_appointment_request.php" method="post" onsubmit="return validateForm1()">
       <h3>Request Consultation Appointment</h3>
 
       <label for="nationalID">nationalID:</label>
@@ -63,11 +64,13 @@
       <label for="duration">Duration (in minutes):</label>
       <input type="number" id="duration" name="duration" required>
 
+
       <label for="payment-mode">Preferred payment mode:</label>
-      <select id="payment-mode" name="payment-mode">
-        <option value="momo">MOMO</option>
-        <option value="bank">BANK</option>
-      </select>
+  <select id="payment-mode" name="payment_mode"> <!-- Updated name attribute -->
+    <option value="momo">MOMO</option>
+    <option value="bank">BANK</option>
+  </select>
+
 
       <!-- Message Section -->
       <label for="comments">Additional Comments:</label>
@@ -80,11 +83,12 @@
       </label>
 
       <div class="btn-box">
-        <button type="button" id="next1">next</button>
+        <!--<button type="button" id="next1">next</button> -->
+        <button type="submit" name="next1" id="next1">next</button>
       </div>
     </form>
 
-    <form id="form2">
+    <form id="form2" action="process_appointment_request.php" method="post" onsubmit="return validateForm2()">
       <h3>MAKE BANK PAYMENT</h3>
       <section>
         <label>Card number</label>
@@ -108,11 +112,11 @@
         </div>
       </section>
       <div class="btn-box">
-        <button type="button" id="back1">back</button>
-        <button type="button" id="next2">next</button>
+      <button type="submit" name="back1" id="back1">back</button>
+        <button type="submit" name="next2" id="next2">next</button>
       </div>
     </form>
-    <form id="form3">
+    <form id="form3" action="process_appointment_request.php" method="post">
       <h3>Confirm Request</h3>
 
       
@@ -127,8 +131,8 @@
 
 
       <div class="btn-box">
-        <button type="button" id="back2">back</button>
-        <button type="submit">submit</button>
+      <button type="submit" name="back2" id="back2">back</button>
+        <button type="submit" name="submit" id="submit">submit</button>
       </div>
     </form>
     <div class="step-row">
@@ -140,43 +144,49 @@
 
   </div>
 
+  
   <script>
     var form1 = document.getElementById("form1");
     var form2 = document.getElementById("form2");
     var form3 = document.getElementById("form3");
 
-    var next1 = document.getElementById("next1");
-    var next2 = document.getElementById("next2");
-    var back1 = document.getElementById("back1");
-    var back2 = document.getElementById("back2");
-
     var progress = document.getElementById("progress");
 
-    next1.onclick = function () {
-      form1.style.left = "-570px";
-      form2.style.left = "55px";
-      progress.style.width = "240px"
+    form1.onsubmit = function () {
+        form1.style.left = "-570px";
+        form2.style.left = "55px";
+        progress.style.width = "240px";
+        return false; // Prevents the form from submitting
     }
 
-    back1.onclick = function () {
-      form1.style.left = "55px";
-      form2.style.left = "570px";
-      progress.style.width = "120px"
+    form2.onsubmit = function () {
+        form2.style.left = "-570px";
+        form3.style.left = "55px";
+        progress.style.width = "360px";
+        return false; // Prevents the form from submitting
     }
 
-    next2.onclick = function () {
-      form2.style.left = "-570px";
-      form3.style.left = "55px";
-      progress.style.width = "360px"
+    form3.onsubmit = function () {
+        // Allow the form to submit for the final step
+        return true;
     }
 
-    back2.onclick = function () {
-      form2.style.left = "55px";
-      form3.style.left = "570px";
-      progress.style.width = "240px"
+ function validateForm1() {
+        form1.style.left = "-570px";
+        form2.style.left = "55px";
+        progress.style.width = "240px";
+        return false; // Prevents the form from submitting
     }
 
-  </script>
+    function validateForm2() {
+        form2.style.left = "-570px";
+        form3.style.left = "55px";
+        progress.style.width = "360px";
+        return false; // Prevents the form from submitting
+    }
+
+</script>
+
 
 
   <!--
